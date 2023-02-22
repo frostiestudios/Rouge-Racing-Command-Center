@@ -5,7 +5,7 @@ import subprocess
 def rouge(btn):
     if btn=="XAMPP":
         print("opening XAMPP")
-        os.startfile("C:/XAMPP/xampp-control.exe")
+
         subprocess.call(['C:/XAMPP/xampp-control.exe', 'startapache', 'startmysql'])
         app.infoBox("Success", "Apache and MySQL servers started!")
     if btn=="Lounge Control":
