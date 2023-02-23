@@ -1,25 +1,22 @@
-import appJar
+l_lapcount=0
+lapcount=0
 
+def acMain(ac_version):
+   global l_lapcount
 
-# Initialize the app
-app = appJar.gui("Assetto Corsa Car Tracker")
+   appWindow = ac.newApp("appName")
+   ac.setSize(appWindow, 200, 200)
 
-# Define a function to update the car's position
-def update_position():
-    import acServer
-    print("importing server")
-    server = acServer.connect("127.0.0.1", 9000)
-    position = server.getPosition()
+   ac.log("Hello, Assetto Corsa application world!")
+   ac.console("Hello, Assetto Corsa console!")
 
-    print("Car position:", position)
+   l_lapcount = ac.addLabel(appWindow, "Laps: 0");
+   ac.setPosition(l_lapcount, 3, 30)
+   return "appName"
 
-# Create a button to start tracking the car
-def start_tracking():
-    app.setPollTime(100)
-    app.registerEvent(update_position)
-
-# Add the button to the app
-app.addButtons(["Start Tracking"], [start_tracking])
-
-# Start the app
-app.go()
+def acUpdate(deltaT):
+   global l_lapcount, lapcount
+   laps = ac.getCarState(0, acsys.CS.LapCount)
+   if laps > lapcount:
+      lapcount = laps
+      ac.setText(l_lapcount, "Laps: {}".format(lapcount))
