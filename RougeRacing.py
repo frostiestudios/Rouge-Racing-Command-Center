@@ -24,8 +24,6 @@ def ms(btn):
     if btn=="MSOpen":
         os.open("C:\LoungeControl\LoungeControl-ACMultiServer\LC-AC-MultiServer.exe")
 app = gui("Command Center")
-app.addButtons(["XAMPP","Lounge Control","MultiServer"],rouge)
-
 
 app.startLabelFrame("XAMPP",1,1)
 app.addButtons(["XAMPPStart","XAMPPStop"],xampp)
@@ -40,6 +38,5 @@ app.addButtons(["MSOpen","MSStop"],ms)
 app.stopLabelFrame()
 
 app.startLabelFrame("Lounge Control Settigns",2,1,3)
-app.addButtons(["Remote Launcher","Leaderboard Control"],rouge)
 app.stopLabelFrame()
 app.go()
