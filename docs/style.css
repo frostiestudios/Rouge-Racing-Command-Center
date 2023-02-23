@@ -1,6 +1,40 @@
 #sitetitle {
     font-family: Helvetica;
 }
+#no1{
+    width: 10%;
+}
+#no2{
+	width: 10%;
+}
+#no3{
+	
+}
+#no4{
+	
+}
 .h2 {
 	font-family: Helvetica;
+}
+.divsecr {
+    width: 45%;
+    font-family: Helvetica;
+    float: right;
+}
+.divsecl {
+    width: 45%;
+	font-family: Helvetica;
+	float: left;
+}
+.devboxnf {
+    color: #FF0004;
+}
+.devboxip {
+    color: #299A00;
+}
+.devboxnfi {
+    color: #38A000;
+}
+.navbar {
+    width: 100%;
 }
