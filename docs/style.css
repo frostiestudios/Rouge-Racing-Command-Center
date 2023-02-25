@@ -2,16 +2,17 @@
     font-family: Helvetica;
 }
 #no1{
-    width: 10%;
+    font-family: Helvetica;
+    font-weight: bold;
 }
 #no2{
-	width: 10%;
+	font-family: Helvetica;
 }
 #no3{
-	
+	font-family: Helvetica;
 }
 #no4{
-	
+	font-family: Helvetica;
 }
 .h2 {
 	font-family: Helvetica;
@@ -36,5 +37,10 @@
     color: #38A000;
 }
 .navbar {
+    background-color: #0090A2;
     width: 100%;
+    margin-top: 13px;
+    margin-right: 13px;
+    margin-bottom: 13px;
+    margin-left: 13px;
 }
